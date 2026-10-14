@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>芳賀赤十字病院 華道展 作品ギャラリー</title>
+
+<style>
+
+body{
+    text-align:center;
+    font-family:"Yu Gothic","メイリオ",sans-serif;
+    background:#f8f4ef;
+    padding:20px;
+}
+
+h1{
+    color:#8B4513;
+}
+
+h2{
+    color:#b22222;
+}
+
+img{
+    max-width:90%;
+    max-height:60vh;
+    margin:20px 0;
+    border-radius:10px;
+}
+
+#flowerName{
+    font-size:28px;
+    color:#b22222;
+    margin-top:15px;
+}
+
+#department{
+    font-size:20px;
+    color:#444;
+    margin-top:5px;
+}
+
+#year{
+    font-size:18px;
+    color:#666;
+    margin-top:5px;
+}
+
+button{
+    font-size:18px;
+    padding:10px 20px;
+    border:none;
+    border-radius:10px;
+    background:#d2691e;
+    color:white;
+    cursor:pointer;
+    margin-top:20px;
+}
+
+button:hover{
+    background:#a0522d;
+}
+
+.description{
+    margin-bottom:20px;
+    line-height:1.8;
+}
+
+</style>
+
+<script>
+
+const flowers = [
+
+{
+    image:"https://drive.google.com/thumbnail?id=16gqsf4ChDb4BIUM8rUdMq_G5glEgD5_6&sz=w2000",
+    title:"調和のかたち",
+    department:"医療情報課",
+    year:"2025年"
+},
+
+{
+    image:"https://drive.google.com/thumbnail?id=1jJn9O8TYdsFYDYfgYm86C3tUThiLfrd6&sz=w2000",
+    department:"3南小児病棟",
+    year:"2025年"
+},
+
+{
+    image:"https://drive.google.com/thumbnail?id=1yBh4_ItNfR5xkNje_WBvD451AN42wW1n&sz=w2000",
+    title:"雨あがり",
+    department:"4東病棟",
+    year:"2025年"
+},
+
+{
+    image:"https://drive.google.com/thumbnail?id=137xB907NHM1-tecKF_DaJ4HhZaUTqnUP&sz=w2000",
+    title:"希望を束ねて",
+    department:"4東病棟",
+    year:"2026年"
+},
+
+{
+    image:"https://drive.google.com/thumbnail?id=1yBh4_ItNfR5xkNje_WBvD451AN42wW1n&sz=w2000",
+    title:"平和",
+    department:"4南病棟",
+    year:"2025年"
+},
+
+{
+    image:"https://drive.google.com/thumbnail?id=1vyrY-R4qI40lqk5c7vXrqJhQkFCIyr45&sz=w2000",
+    title:"ふじ",
+    department:"5東病棟",
+    year:"2026年"
+},
+
+{
+    image:"https://drive.google.com/thumbnail?id=1ldq0bDHEeVJgdh3Ksa75ZS0QEHq2emFF&sz=w2000",
+    department:"医療情報課",
+    year:"2021年"
+},
+
+{
+    image:"https://drive.google.com/thumbnail?id=1lUMSDX9vzg3gSDNK1oUwNO9KhIU_wLbb&sz=w2000",
+    department:"会計課",
+    year:"2025年"
+},
+
+{
+    image:"https://drive.google.com/thumbnail?id=1uAwcpsIyAOGRuiD47RpUhPu5LYdMwkXf&sz=w2000",
+    title:"太陽の恵み",
+    department:"看護部",
+    year:"2026年"
+},
+
+{
+    image:"https://drive.google.com/thumbnail?id=18gIGmMFo1piXZyNSur-oePdFfaiSQWXR&sz=w2000",
+    title:"仲夏",
+    department:"眼科部・視能訓練課",
+    year:"2025年"
+},
+
+{
+    image:"https://drive.google.com/thumbnail?id=182DnR1AZg9MCOTzh3GrBcSctdX6nrcBX&sz=w2000",
+    department:"歯科口腔外科",
+    year:"2025年"
+},
+
+{
+    image:"https://drive.google.com/thumbnail?id=1nu_otEd6uZcMdtyp8ihl7nCGovvt0J-_&sz=w2000",
+    title:"夏が来た",
+    department:"人事課・総務課・社会課",
+    year:"2025年"
+},
+
+{
+    image:"https://drive.google.com/thumbnail?id=1y0ACpIA58lz4fOFBrKsmZdY5E4DgIFOj&sz=w2000",
+    title:"Rendez-vous（ランデヴー）",
+    department:"臨床工学課",
+    year:"2026年"
+},
+
+{
+    image:"https://drive.google.com/thumbnail?id=1ZWxvXSzQ2ZABXTev3HoZ9FLQ69InN0BI&sz=w2000",
+    title:"白南風",
+    department:"HCU・3東病棟",
+    year:"2022年"
+}
+
+];
+
+function showRandomFlower(){
+
+    const random =
+    Math.floor(Math.random() * flowers.length);
+
+    document.getElementById("flower").src =
+    flowers[random].image;
+
+    document.getElementById("flowerName").innerHTML =
+    flowers[random].title || "";
+
+    document.getElementById("department").innerHTML =
+    "展示部署： " + flowers[random].department;
+
+    document.getElementById("year").innerHTML =
+    "展示年度： " + flowers[random].year;
+
+}
+
+window.onload = showRandomFlower;
+
+</script>
+
+</head>
+
+<body>
+
+<h1>芳賀赤十字病院 華道展</h1>
+
+<h2>作品ギャラリー</h2>
+
+<div class="description">
+
+過去の華道展で院内に展示された作品をご紹介します。<br><br>
+
+四季折々の花々が彩る作品を通して、<br>
+皆さまに安らぎのひとときをお届けできれば幸いです。<br><br>
+
+ボタンを押すたびに、異なる作品をご覧いただけます。
+
+</div>
+
+<img id="flower" src="" alt="華道作品">
+
+<div id="flowerName"></div>
+
+<div id="department"></div>
+
+<div id="year"></div>
+
+<button onclick="showRandomFlower()">
+🌸もう一つ作品を見る🌸
+</button>
+
+</body>
+</html>
