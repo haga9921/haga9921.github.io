@@ -184,12 +184,6 @@ const flowers = [
 
 ];
 
-// 画像を事前読み込み
-flowers.forEach(flower => {
-    const preloadImage = new Image();
-    preloadImage.src = flower.image;
-});
-
 function showRandomFlower(){
 
     const random =
