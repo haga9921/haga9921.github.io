@@ -107,7 +107,7 @@ const flowers = [
 
 {
     image:"https://drive.google.com/thumbnail?id=1THXPVHp-Nw1eTUbJqDiFChVuBh-By3rz&sz=w2000",
-    title:"雨あがり",
+    title:"雨上がり",
     department:"4東病棟",
     year:"2025年"
 },
@@ -180,6 +180,12 @@ const flowers = [
 },
 
 ];
+
+// 画像を事前読み込み
+flowers.forEach(flower => {
+    const preloadImage = new Image();
+    preloadImage.src = flower.image;
+});
 
 function showRandomFlower(){
 
