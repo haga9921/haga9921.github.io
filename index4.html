@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>芳賀赤十字病院 華道展 作品ギャラリー</title>
+
+<style>
+
+body{
+    text-align:center;
+    font-family:"Yu Gothic","メイリオ",sans-serif;
+    background:#F7F2E9;
+    color:#4A3B2D;
+    padding:20px;
+}
+
+h1{
+    color:#7A4E2D;
+    font-size:42px;
+    margin-bottom:5px;
+}
+
+h2{
+    color:#B55233;
+    font-size:28px;
+    margin-top:0;
+}
+
+.description{
+    margin:0 auto 25px auto;
+    max-width:500px;
+    text-align:left;
+    line-height:1.8;
+    font-size:25px;
+}
+
+img{
+    max-width:95%;
+    max-height:60vh;
+    margin:20px 0;
+　　opacity:1;
+　　transition:opacity 0.3s ease-in-out;
+}
+
+#flowerName{
+    font-size:32px;
+    color:#B55233;
+    font-weight:bold;
+}
+
+#department{
+    font-size:24px;
+    color:#4A3B2D;
+}
+
+#year{
+    font-size:22px;
+    color:#666;
+}
+
+button{
+    font-size:28px;
+    padding:18px 35px;
+    border:none;
+    border-radius:50px;
+    background:#C96A2D;
+    color:white;
+    cursor:pointer;
+    margin-top:25px;
+}
+
+button:hover{
+    background:#A64B2A;
+}
+
+.description{
+　　margin:0 auto 20px auto;
+　　max-width:500px;
+　　text-align:left;
+　　line-height:1.8;
+　　font-size:26px;
+}
+
+</style>
+
+<script>
+
+const flowers = [
+
+{
+    image:"images/2021iryouzyouhou.png",
+    department:"医療情報課",
+    year:"2021年"
+},
+
+{
+    image:"images/2022HCU.png",
+    title:"白南風",
+    department:"HCU・3東病棟",
+    year:"2022年"
+},
+
+{
+    image:"images/2022iryouzyouhou.png",
+    department:"医療情報課",
+    year:"2022年"
+},
+
+{
+    image:"images/20254E.png",
+    title:"雨上がり",
+    department:"4東病棟",
+    year:"2025年"
+},
+
+{
+    image:"images/20254S.png",
+    title:"平和",
+    department:"4南病棟",
+    year:"2025年"
+},
+
+{
+    image:"images/2025iryouzyouhou.png",
+    title:"調和のかたち",
+    department:"医療情報課",
+    year:"2025年"
+},
+
+{
+    image:"images/2025kaikei.png",
+    department:"会計課",
+    year:"2025年"
+},
+
+{
+    image:"images/2025ganka.png",
+    title:"仲夏",
+    department:"眼科部・視能訓練課",
+    year:"2025年"
+},
+
+{
+    image:"images/2025shika.png",
+    department:"歯科口腔外科",
+    year:"2025年"
+},
+
+{
+    image:"images/20253S.png",
+    department:"3南小児病棟",
+    year:"2025年"
+},
+
+{
+    image:"images/2025soumu.png",
+    title:"夏が来た",
+    department:"人事課・総務課・社会課",
+    year:"2025年"
+},
+
+{
+    image:"images/20264E.png",
+    title:"希望を束ねて",
+    department:"4東病棟",
+    year:"2026年"
+},
+
+{
+    image:"images/20265E.png",
+    title:"ふじ",
+    department:"5東病棟",
+    year:"2026年"
+},
+
+{
+    image:"images/2026kango.png",
+    title:"太陽の恵み",
+    department:"看護部",
+    year:"2026年"
+},
+
+
+{
+    image:"images/2026CE.png",
+    title:"Rendez-vous<br>
+　　（ランデヴー）",
+    department:"臨床工学課",
+    year:"2026年"
+},
+
+];
+
+// 画像を事前読み込み
+flowers.forEach(flower => {
+    const preloadImage = new Image();
+    preloadImage.src = flower.image;
+});
+
+function showRandomFlower(){
+
+    const random =
+    Math.floor(Math.random() * flowers.length);
+
+    document.getElementById("flower").src =
+    flowers[random].image;
+
+    document.getElementById("flowerName").innerHTML =
+    flowers[random].title || "";
+
+    document.getElementById("department").innerHTML =
+    "展示部署： " + flowers[random].department;
+
+    document.getElementById("year").innerHTML =
+    "展示年度： " + flowers[random].year;
+
+}
+
+window.onload = showRandomFlower;
+
+</script>
+
+</head>
+
+<body>
+
+<h1>芳賀赤十字病院 華道展</h1>
+
+<h2>作品ギャラリー</h2>
+
+<div class="description">
+
+過去の華道展で院内に展示された作品をご紹介します。<br><br>
+
+花々が織りなす彩りと季節の移ろいを感じながら、どうぞごゆっくりお楽しみください。<br><br>
+
+ボタンを押すたびに、異なる作品をご覧いただけます。
+
+</div>
+
+<img id="flower" src="" alt="華道作品">
+
+<div id="flowerName"></div>
+
+<div id="department"></div>
+
+<div id="year"></div>
+
+<button onclick="showRandomFlower()">
+🌸別の作品を見る🌸
+</button>
+
+</body>
+</html>
